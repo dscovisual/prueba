@@ -1,0 +1,304 @@
+:root {
+    --bg-color: #0d0d0f;
+    --card-bg: #16161a;
+    --accent-color: #d4af37; 
+    --hover-color: #ff8c00;  
+    --text-color: #e1e1e6;
+    --text-muted: #a0a0b0;
+    --border-color: #2a2a35;
+
+
+    --font-titles: 'Playfair Display', Georgia, serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+
+h1, h2, h3, .section-title {
+    font-family: var(--font-titles);
+}
+
+
+.hover-text:hover {
+    color: var(--hover-color) !important;
+    cursor: default;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px 40px;
+    background: linear-gradient(180deg, #1c1c24 0%, var(--bg-color) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.6));
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-family: var(--font-titles);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+
+.badge-status {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.open { background-color: #1b4332; color: #52b788; }
+.closed-badge { background-color: #4a0e17; color: #ff4d6d; }
+
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: rgba(22, 22, 26, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-bar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-bar a:hover { color: var(--hover-color); }
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.section { margin-bottom: 50px; }
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body { padding: 20px; }
+
+.card-body h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: var(--font-body);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tag-especialidad { background-color: #332a00; color: var(--accent-color); }
+.tag-veggie { background-color: #0f381e; color: #52b788; }
+.tag-sintacc { background-color: #1a2a3a; color: #66b2ff; }
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.info-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.card-info {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.schedule-list { list-style: none; }
+
+.schedule-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-list li:last-child { border-bottom: none; }
+.closed { color: #ff4d6d; font-weight: bold; }
+
+.actions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #000;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb853;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.btn-map {
+    background-color: #2a2a35;
+    color: #fff;
+    border: 1px solid #3a3a4c;
+}
+
+.btn-map:hover {
+    background-color: var(--hover-color);
+    color: #000;
+    border-color: var(--hover-color);
+}
+
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+@media (min-width: 768px) {
+    .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-full-width { grid-column: 1 / -1; }
+    .actions-section { flex-direction: row; }
+    .btn { flex: 1; }
+}
